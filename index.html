@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>可爱的瓦片坐标编辑器</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🐰 瓦片坐标编辑器 🎨</h1>
+            <p>上传文件，分析IMG数量，更新坐标信息吧！</p>
+        </header>
+        
+        <main>
+            <section class="upload-section">
+                <div class="upload-box">
+                    <h2>📁 上传文件</h2>
+                    <input type="file" id="file-upload" accept=".til,.txt">
+                    <label for="file-upload" class="upload-label">
+                        <span>点击或拖拽文件到这里</span>
+                    </label>
+                </div>
+            </section>
+            
+            <section class="result-section">
+                <h2>🔍 分析结果</h2>
+                <div class="result-box">
+                    <p>总共有 <span id="img-count" class="highlight">0</span> 个 IMG 标签</p>
+                </div>
+            </section>
+            
+            <section class="coordinates-section">
+                <h2>📝 输入新坐标</h2>
+                <div class="coordinates-box">
+                    <p>请按顺序输入新的坐标，每行一个 (格式：x,y,w,h)</p>
+                    <textarea id="coordinates-input" rows="10" placeholder="例如：
+198,0,229,162
+426,0,228,162
+..."></textarea>
+                    <button id="update-btn" class="btn">✨ 更新坐标</button>
+                </div>
+            </section>
+            
+            <section class="output-section">
+                <h2>📋 更新后的代码</h2>
+                <div class="output-box">
+                    <pre id="output-code"></pre>
+                    <button id="copy-btn" class="btn">📋 复制代码</button>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>✨ 可爱瓦片坐标编辑器 © 2023</p>
+        </footer>
+    </div>
+    
+    <div class="cute-elements">
+        <div class="cloud cloud-1"></div>
+        <div class="cloud cloud-2"></div>
+        <div class="star star-1"></div>
+        <div class="star star-2"></div>
+        <div class="star star-3"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
